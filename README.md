@@ -4,6 +4,7 @@ The following lists currently supported features:
    * Digital read and write.
    * I2C read and write.
 
+The following information is from the original Pi4J readme.
 
  Pi4J :: Java I/O Library for Raspberry Pi
 ==========================================================================
