@@ -1,3 +1,9 @@
+This fork of the Pi4J library is to allow the addition of Orange Pi support. 
+
+The following lists currently supported features:
+   * Digital read and write.
+   * I2C read and write.
+
 
  Pi4J :: Java I/O Library for Raspberry Pi
 ==========================================================================
