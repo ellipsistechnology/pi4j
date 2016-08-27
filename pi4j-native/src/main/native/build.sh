@@ -68,6 +68,43 @@ fi
 
 
 # ------------------------------------------------------
+# ORANGE-PI
+# ------------------------------------------------------
+echo
+echo "**********************************************************************"
+echo "*                                                                    *"
+echo "*           BUILDING Pi4J FOR THE 'OrangePi' PLATFORM                *"
+echo "*                                                                    *"
+echo "**********************************************************************"
+echo
+WIRINGPI_PLATFORM=orangepi
+
+# build wiringPi
+export WIRINGPI_REPO=https://github.com/zhaolei/WiringOP
+export WIRINGPI_BRANCH=h3
+export WIRINGPI_DIRECTORY=wiringPi
+rm --recursive --force wiringPi
+./wiringpi-build.sh $@
+
+# compile the 'lib4j.so' JNI native shared library with statically linked dependencies
+echo
+echo "==========================================="
+echo "Building Pi4J JNI library (staticly linked)"
+echo "==========================================="
+echo
+mkdir -p lib/$WIRINGPI_PLATFORM/static
+make clean static TARGET=lib/$WIRINGPI_PLATFORM/static/libpi4j.so $@
+
+# compile the 'lib4j.so' JNI native shared library with dynamically linked dependencies
+echo
+echo "=============================================="
+echo "Building Pi4J JNI library (dynamically linked)"
+echo "=============================================="
+echo
+mkdir -p lib/$WIRINGPI_PLATFORM/dynamic
+make clean dynamic TARGET=lib/$WIRINGPI_PLATFORM/dynamic/libpi4j.so $@
+
+# ------------------------------------------------------
 # RASPBERRY-PI
 # ------------------------------------------------------
 echo

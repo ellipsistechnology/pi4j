@@ -32,6 +32,7 @@ package com.pi4j.platform;
 import com.pi4j.io.gpio.BananaPiGpioProvider;
 import com.pi4j.io.gpio.BananaProGpioProvider;
 import com.pi4j.io.gpio.GpioProvider;
+import com.pi4j.io.gpio.OPGpioProvider;
 import com.pi4j.io.gpio.OdroidGpioProvider;
 import com.pi4j.io.gpio.RaspiGpioProvider;
 import com.pi4j.io.i2c.I2CFactoryProvider;
@@ -58,7 +59,8 @@ public enum Platform {
     RASPBERRYPI("raspberrypi", "Raspberry Pi"),
     BANANAPI("bananapi", "BananaPi"),
     BANANAPRO("bananapro", "BananaPro"),
-    ODROID("odroid", "Odroid");
+    ODROID("odroid", "Odroid"),
+    ORANGEPI("orangepi", "OrangePi");
 
     // private variables
     protected String platformId = null;
@@ -137,6 +139,9 @@ public enum Platform {
             }
             case ODROID: {
                 return new OdroidGpioProvider();
+            }
+            case ORANGEPI: {
+            	return new OPGpioProvider();
             }
             default: {
                 // if a platform cannot be determine, then assume it's the default RaspberryPi

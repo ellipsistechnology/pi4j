@@ -4,6 +4,7 @@ target
 gen
 build
 bin
+*.class
 
 # IntelliJ files
 .idea

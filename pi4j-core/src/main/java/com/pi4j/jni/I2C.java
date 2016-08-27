@@ -144,7 +144,7 @@ public class I2C {
     public static native int i2cReadBytesDirect(int fd, int deviceAddress, int size, int offset, byte[] buffer);
 
     /**
-     * Reads one byte from i2c device. It uses ioctl to define device address, writes addres in device and then reads
+     * Reads one byte from i2c device. It uses ioctl to define device address, writes address in device and then reads
      * one byte.
      *
      * @param fd            file descriptor of i2c bus

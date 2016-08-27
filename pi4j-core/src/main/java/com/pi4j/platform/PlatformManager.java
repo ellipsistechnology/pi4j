@@ -119,8 +119,8 @@ public class PlatformManager {
             }
         }
 
-        // the RASPBERRY_PI is the default platform;
+        // the ORANGEPI is the default platform;
         // (... in time perhaps some auto-platform detection could be implemented here ...)
-        return Platform.RASPBERRYPI;
+        return Platform.ORANGEPI;
     }
 }

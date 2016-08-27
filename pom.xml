@@ -103,10 +103,10 @@
 	<properties>
 
 		<!-- DEFAULT RASPBERRY PI PROPERTIES -->
-		<pi.host>192.168.1.100</pi.host>
+		<pi.host>192.168.1.4</pi.host>
 		<pi.port>22</pi.port>
-		<pi.user>pi</pi.user>
-		<pi.password>raspberry</pi.password>
+		<pi.user>root</pi.user>
+		<pi.password>orangepi</pi.password>
 
 		<!-- SETTINGS FOR REMOTELY BUILDING NATIVE LIBRARY ON RASPBERRY PI -->
 		<pi.dirBuildTemp>pi4j-temp</pi.dirBuildTemp>

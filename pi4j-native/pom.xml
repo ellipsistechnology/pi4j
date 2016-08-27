@@ -262,6 +262,17 @@
                                     <type>so</type>
                                     <classifier>odroid-dynamic</classifier>
                                 </artifact>
+                                <!-- LIBPI4J for ORANGEPI -->
+                                <artifact>
+                                    <file>${project.build.directory}/native/lib/orangepi/static/libpi4j.so</file>
+                                    <type>so</type>
+                                    <classifier>orangepi-static</classifier>
+                                </artifact>
+                                <artifact>
+                                    <file>${project.build.directory}/native/lib/orangepi/dynamic/libpi4j.so</file>
+                                    <type>so</type>
+                                    <classifier>orangepi-dynamic</classifier>
+                                </artifact>
                             </artifacts>
                         </configuration>
                     </execution>
